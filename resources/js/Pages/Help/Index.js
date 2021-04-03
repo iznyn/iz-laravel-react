@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Layout from '@inc/Layout/Main';
 
-export default function Help() {
-  return (
-    <div>
-      <h1>Help</h1>
-    </div>
-  )
-}
+const Help = () => (
+  <Layout>
+    <h1>Help</h1>
+  </Layout>
+);
+
+export default Help;

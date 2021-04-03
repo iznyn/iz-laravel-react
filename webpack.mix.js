@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const mix = require('laravel-mix');
 const path = require('path');
 const cssImport = require('postcss-import');
@@ -14,23 +15,26 @@ const cssNesting = require('postcss-nesting');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .react()
-    .sass('resources/sass/app.scss', 'public/css', {}, [
-        // prettier-ignore
-        cssImport(),
-        cssNesting(),
-        require('tailwindcss'),
-        require('autoprefixer'),
-    ])
-   .webpackConfig({
-        output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
-        resolve: {
-            alias: {
-                '@': path.resolve('resources/js'),
-                '@pages': path.resolve('resources/js/Pages'),
-            },
-        },
-    })
-    .version()
-    .sourceMaps();
+mix
+  .js('resources/js/app.js', 'public/js')
+  .react()
+  .sass('resources/sass/app.scss', 'public/css', {}, [
+    // prettier-ignore
+    cssImport(),
+    cssNesting(),
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ])
+  .webpackConfig({
+    output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
+    resolve: {
+      alias: {
+        '@': path.resolve('resources/js'),
+        '@pages': path.resolve('resources/js/Pages'),
+        '@inc': path.resolve('resources/js/Includes'),
+        '@comp': path.resolve('resources/js/Components'),
+      },
+    },
+  })
+  .version()
+  .sourceMaps();

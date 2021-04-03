@@ -1,0 +1,6 @@
+/**
+ * Title styles
+ */
+.title {
+  @apply uppercase font-bold text-black;
+}
