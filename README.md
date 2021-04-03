@@ -19,8 +19,11 @@ cp .env.example .env
 php artisan key:generate
 ```
 3. Prepare the database
+
 3.1. Create new database
+
 3.2. Change database settings in .env
+
 3.3. Importing database with run:
 ```sh
 php artisan migrate
