@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '@comp/Title';
 import Layout from '@inc/Layout/Main';
 
-const Dashboard = () => (
+const Home = () => (
   <Layout>
     <h1>Home</h1>
     <Title>Section 1</Title>
@@ -22,4 +22,4 @@ const Dashboard = () => (
   </Layout>
 );
 
-export default Dashboard;
+export default Home;

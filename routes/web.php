@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HelpController;
 
 /*
@@ -15,10 +15,10 @@ use App\Http\Controllers\HelpController;
 |
 */
 
-// Dashboard
-Route::get('/', [DashboardController::class, 'index'])
-    ->name('dashboard');
+// Home
+Route::get('/', [HomeController::class, 'index'])
+    ->name('home');
 
-// Dashboard
+// Help
 Route::get('/help', [HelpController::class, 'index'])
     ->name('help');

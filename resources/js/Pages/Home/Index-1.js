@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@inc/Layout/Main';
 
-const Dashboard = () => (
+const Home = () => (
   <Layout>
     <h1>Home</h1>
     <div className="section">
@@ -135,4 +135,4 @@ const Dashboard = () => (
   </Layout>
 );
 
-export default Dashboard;
+export default Home;
