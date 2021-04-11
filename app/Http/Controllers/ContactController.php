@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
-class HomeController extends MainController
+class ContactController extends MainController
 {
     /**
      * Main article category page
@@ -15,10 +15,10 @@ class HomeController extends MainController
     public function index(Request $request)
     {
         $data  = array(
-            'siteTitle'     => __('Homepage'),
-            'siteDesc'      => __('Homepage'),
-            'bodyClass'     => 'home',
+            'siteTitle'     => 'Contact',
+            'siteDesc'      => 'Contact',
+            'bodyClass'     => 'contact',
         );
-        return view('main.pages.home.main', $data);
+        return view('main.pages.contact.main', $data);
     }
 }
