@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 const mix = require('laravel-mix');
-const path = require('path');
+// const path = require('path');
 const cssImport = require('postcss-import');
 const cssNesting = require('postcss-nesting');
 
@@ -16,25 +16,13 @@ const cssNesting = require('postcss-nesting');
  */
 
 mix
-  .js('js/app.js', './../../public/js/admin.js')
-  .react()
-  .sass('sass/app.scss', './../../public/css', {}, [
+  .js('resources/app/js/app.js', 'public/js/app.js')
+  .sass('resources/admin/sass/app.scss', 'public/css/app.css', {}, [
     // prettier-ignore
     cssImport(),
     cssNesting(),
     require('tailwindcss'),
     require('autoprefixer'),
   ])
-  .webpackConfig({
-    output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
-    resolve: {
-      alias: {
-        '@': path.resolve('js'),
-        '@pages': path.resolve('js/Pages'),
-        '@inc': path.resolve('js/Includes'),
-        '@comp': path.resolve('js/Components'),
-      },
-    },
-  })
   .version()
   .sourceMaps();
