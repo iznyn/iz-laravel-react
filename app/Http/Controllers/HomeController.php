@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
-class HomeController extends MainController
+class HomeController extends AppController
 {
     /**
      * Main article category page
@@ -19,6 +19,6 @@ class HomeController extends MainController
             'siteDesc'      => __('Homepage'),
             'bodyClass'     => 'home',
         );
-        return view('main.pages.home.main', $data);
+        return view('app.pages.home.main', $data);
     }
 }

@@ -12,7 +12,7 @@
     <meta name="description" content="{{ $siteDesc }}">
 
     <!-- Main styles for this application -->
-    <link href="{{ asset('public/assets/css/main.css').'?v=0.0.1' }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/css/app.css').'?v=0.0.1' }}" rel="stylesheet">
 
     <!--call google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -65,7 +65,7 @@
     </div>
 
     <!-- Main scripts -->
-    <script src="{{ asset('public/assets/js/main.js').'?v=0.0.1' }}"></script>
+    <script src="{{ asset('public/assets/js/app.js').'?v=0.0.1' }}"></script>
 
 </body>
 

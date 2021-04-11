@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
-class ContactController extends MainController
+class ContactController extends AppController
 {
     /**
      * Main article category page
@@ -19,6 +19,6 @@ class ContactController extends MainController
             'siteDesc'      => 'Contact',
             'bodyClass'     => 'contact',
         );
-        return view('main.pages.contact.main', $data);
+        return view('app.pages.contact.main', $data);
     }
 }

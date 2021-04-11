@@ -12,7 +12,7 @@
     <meta name="description" content="Error Server">
 
     <!-- Main styles for this application -->
-    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
 
     <!-- scripts -->
     <script>
@@ -34,7 +34,7 @@
     </div>
 
     <!-- Main scripts -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 
 </body>
 

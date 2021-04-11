@@ -25,7 +25,7 @@ mix
     require('tailwindcss'),
     require('autoprefixer'),
   ])
-  .webpackConfig({
+  .webpackConfig((webpack) => ({
     output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
     resolve: {
       alias: {
@@ -35,6 +35,13 @@ mix
         '@comp': path.resolve('resources/admin/js/Components'),
       },
     },
-  })
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+      }),
+    ],
+  }))
   .version()
   .sourceMaps();

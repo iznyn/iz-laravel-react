@@ -12,7 +12,7 @@
     <meta name="description" content="Error 404 - Page Not Found">
 
     <!-- Main styles for this application -->
-    <link href="{{ asset('public/assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/css/app.css') }}" rel="stylesheet">
 
     <!-- scripts -->
     <script>
@@ -34,7 +34,7 @@
     </div>
 
     <!-- Main scripts -->
-    <script src="{{ asset('public/assets/js/main.js') }}"></script>
+    <script src="{{ asset('public/assets/js/app.js') }}"></script>
 
 </body>
 
