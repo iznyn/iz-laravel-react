@@ -12,21 +12,21 @@
     <meta name="description" content="{{ $siteDesc }}">
 
     <!-- Main styles for this application -->
-    <link href="{{ asset('public/assets/css/app.css').'?v=0.0.1' }}" rel="stylesheet">
+    <link href="{{ asset('public/css/app.css').'?v=0.0.1' }}" rel="stylesheet">
 
     <!--call google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!--favicon-->
-    <link rel="shortcut icon" type="image/png" href="{{ asset('public/assets/images/favicon.ico') }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('public/images/favicon.ico') }}"/>
 
 
     <!-- scripts -->
     <script>
         var API_BASE_URL = "{{ URL::to('/') }}/api/";
-        var ASSETS_BASE_URL = "{{ asset('assets/frontend') }}/";
-        var IMG_BASE_URL = "{{ asset('public/assets/frontend/images') }}/";
+        var ASSETS_BASE_URL = "{{ asset('public') }}/";
+        var IMG_BASE_URL = "{{ asset('public/images') }}/";
 
         @if (Auth::user())
             var IS_LOGIN = true;
@@ -53,7 +53,7 @@
 <body class="{{ $bodyClass }}">
     <div class="root">
         <!-- header -->
-        @include('main.includes.header')
+        @include('app.includes.header')
 
         <!-- main -->
         <main class="main">
@@ -61,11 +61,11 @@
         </main>
 
         <!-- footer -->
-        @include('main.includes.footer')
+        @include('app.includes.footer')
     </div>
 
     <!-- Main scripts -->
-    <script src="{{ asset('public/assets/js/app.js').'?v=0.0.1' }}"></script>
+    <script src="{{ asset('public/js/app.js').'?v=0.0.1' }}"></script>
 
 </body>
 

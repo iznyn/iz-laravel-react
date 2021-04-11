@@ -24,5 +24,14 @@ mix
     require('tailwindcss'),
     require('autoprefixer'),
   ])
+  .webpackConfig((webpack) => ({
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+      }),
+    ],
+  }))
   .version()
   .sourceMaps();

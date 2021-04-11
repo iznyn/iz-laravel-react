@@ -22,10 +22,10 @@ mix
     // prettier-ignore
     cssImport(),
     cssNesting(),
-    require('tailwindcss'),
+    require('tailwindcss')('./tailwind.config.admin.js'),
     require('autoprefixer'),
   ])
-  .webpackConfig((webpack) => ({
+  .webpackConfig({
     output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
     resolve: {
       alias: {
@@ -35,13 +35,6 @@ mix
         '@comp': path.resolve('resources/admin/js/Components'),
       },
     },
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-      }),
-    ],
-  }))
+  })
   .version()
   .sourceMaps();

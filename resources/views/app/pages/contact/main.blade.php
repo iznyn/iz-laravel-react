@@ -4,8 +4,8 @@
  *
  */
 ?>
-@extends('main.layouts.basic')
+@extends('app.layouts.basic')
 @section('content')
-    <div class="contact__main">
-    </div>
+  <div class="contact__main">
+  </div>
 @endsection

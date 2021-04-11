@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./resources/views/app/**/*.blade.php'],
+  purge: ['./resources/admin/**/*.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},

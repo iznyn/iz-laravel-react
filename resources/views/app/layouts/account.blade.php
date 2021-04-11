@@ -3,7 +3,7 @@
  * Account layout
  */
 ?>
-@extends('main.layouts.basic')
+@extends('app.layouts.basic')
 @section('content')
 
 <main class="main">

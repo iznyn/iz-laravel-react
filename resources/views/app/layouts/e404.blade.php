@@ -23,13 +23,13 @@
 <body class="e-404">
     <div class="root">
 
-        @include('main.includes.header')
+        @include('app.includes.header')
 
         <main class="main">
             @yield('content')
         </main>
 
-        @include('main.includes.footer')
+        @include('app.includes.footer')
 
     </div>
 

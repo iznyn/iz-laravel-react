@@ -23,13 +23,13 @@
 <body class="error">
     <div class="root">
 
-        @include('main.includes.header')
+        @include('app.includes.header')
 
         <main class="main">
             @yield('content')
         </div>
 
-        @include('main.includes.footer')
+        @include('app.includes.footer')
 
     </div>
 
