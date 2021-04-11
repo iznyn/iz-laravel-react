@@ -16,9 +16,9 @@ const cssNesting = require('postcss-nesting');
  */
 
 mix
-  .js('resources/js/app.js', 'public/js')
+  .js('js/app.js', './../../public/js/admin.js')
   .react()
-  .sass('resources/sass/app.scss', 'public/css', {}, [
+  .sass('sass/app.scss', './../../public/css', {}, [
     // prettier-ignore
     cssImport(),
     cssNesting(),
@@ -29,10 +29,10 @@ mix
     output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
     resolve: {
       alias: {
-        '@': path.resolve('resources/js'),
-        '@pages': path.resolve('resources/js/Pages'),
-        '@inc': path.resolve('resources/js/Includes'),
-        '@comp': path.resolve('resources/js/Components'),
+        '@': path.resolve('js'),
+        '@pages': path.resolve('js/Pages'),
+        '@inc': path.resolve('js/Includes'),
+        '@comp': path.resolve('js/Components'),
       },
     },
   })

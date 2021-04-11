@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\HelpController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +19,6 @@ use App\Http\Controllers\HelpController;
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
-// Help
-Route::get('/help', [HelpController::class, 'index'])
-    ->name('help');
+// Contact
+Route::get('/contact', [ContactController::class, 'index'])
+    ->name('contact');
