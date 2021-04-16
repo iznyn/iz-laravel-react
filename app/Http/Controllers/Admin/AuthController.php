@@ -8,6 +8,6 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return Inertia::render('Admin/Login/Index');
+        return Inertia::render('Login/Index');
     }
 }
