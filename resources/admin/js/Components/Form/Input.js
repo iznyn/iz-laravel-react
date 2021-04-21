@@ -18,12 +18,12 @@ const Input = (props) => {
   return (
     <div
       {...bind}
-      className={classNames('relative', size === 'lg' ? ' pb-6' : ' pb-5')}
+      className={classNames('relative', size === 'lg' ? ' pb-3' : ' pb-2.5')}
     >
       <input
         className={classNames(
           'bg-transparent outline-none w-full text-black',
-          size === 'lg' ? 'text-3xl' : 'text-2xl',
+          size === 'lg' ? 'text-xl' : 'text-lg',
           className,
         )}
         onFocus={() => setOnFocus(true)}

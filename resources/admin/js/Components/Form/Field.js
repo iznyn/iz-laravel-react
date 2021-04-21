@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const Field = (props) => {
   const { id, label, icon, children, className, size, variant, last } = props;
-  const marginSize = size === 'lg' ? 'mb-16' : 'mb-12';
+  const marginSize = size === 'lg' ? 'mb-10' : 'mb-8';
 
   return (
     <div
@@ -19,9 +19,9 @@ const Field = (props) => {
       <label htmlFor={`input-${id}`} className="field__label block mb-3">
         {label}
       </label>
-      <div className={classNames('field__input relative', icon ? 'pl-14' : '')}>
+      <div className={classNames('field__input relative', icon ? 'pl-9' : '')}>
         {icon ? (
-          <div className="field__icon absolute left-0 inset-y-0 text-light2 text-4xl">
+          <div className="field__icon absolute left-0 inset-y-0 text-light2 text-2xl">
             {icon}
           </div>
         ) : null}

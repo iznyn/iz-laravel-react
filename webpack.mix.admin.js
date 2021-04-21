@@ -16,7 +16,7 @@ const cssNesting = require('postcss-nesting');
  */
 
 mix
-  .js('resources/admin/js/app.js', 'public/js/admin.js')
+  .js('resources/admin/js/admin.js', 'public/js')
   .react()
   .sass('resources/admin/sass/app.scss', 'public/css/admin.css', {}, [
     // prettier-ignore
